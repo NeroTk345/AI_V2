@@ -1,0 +1,12 @@
+# fix_tokenizer.py
+
+import torch
+from tokenizer import vocab_size, encode, decode
+
+torch.save({
+    'encode': encode,
+    'decode': decode,
+    'vocab_size': vocab_size
+}, 'checkpoints/tokenizer.pt')
+
+print("Tokenizer succesvol hersteld.")
